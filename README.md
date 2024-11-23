@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+StoreG
+StoreG is a cloud-based storage solution designed to manage and store data securely. With StoreG, users can upload, store, and manage files efficiently, with easy access to data from anywhere. The project utilizes modern web technologies such as React.js, Node.js, and PostgreSQL to offer a scalable and robust file storage system.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+File Uploads & Management: Upload and manage files with custom chunk sizes for efficient storage and retrieval.
+Secure Storage: Advanced encryption methods ensure that all data is stored securely.
+Database: PostgreSQL is used for fast and scalable data storage.
+Responsive UI: Built with React.js for a seamless experience on both desktop and mobile.
+Cloud Integration: Cloud-based storage ensures data availability and redundancy.
+Technologies Used
+Frontend: React.js, Redux (optional for state management)
+Backend: Node.js, Express.js
+Database: PostgreSQL
+Authentication: JWT (JSON Web Tokens)
+File Uploads: Multer (for handling multipart form-data)
+Cloud Storage: (if applicable, specify cloud provider such as AWS, Google Cloud, etc.)
+Installation
+1. Clone the repository
+bash
+Copy code
+git clone https://github.com/faiz-udd/StoreG.git
+cd StoreG
+2. Setup the Backend
+Navigate to the backend directory:
 
-## Available Scripts
+bash
+Copy code
+cd backend
+Install required dependencies:
 
-In the project directory, you can run:
+bash
+Copy code
+npm install
+Create a .env file and configure your environment variables (refer to the .env.example for a template):
 
-### `npm start`
+bash
+Copy code
+touch .env
+Run the backend server:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm run dev
+3. Setup the Frontend
+Navigate to the frontend directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+cd frontend
+Install required dependencies:
 
-### `npm test`
+bash
+Copy code
+npm install
+Run the frontend:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+npm start
+Configuration
+Configure the following environment variables in the .env file:
 
-### `npm run build`
+Backend (Server)
+PORT: Port number for the server (default: 3000)
+DB_DIALECT: Set to 'postgres' (for PostgreSQL database)
+DB_HOST: The host address of the PostgreSQL database.
+DB_PORT: The port number for PostgreSQL (default: 5432).
+DB_NAME: Name of the database.
+DB_USERNAME: Database username.
+DB_PASSWORD: Database password.
+DESTINATION_DIR: Directory path for file uploads.
+Example .env for Backend
+bash
+Copy code
+PORT=3000
+DB_DIALECT=postgres
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=your_drive
+DB_USERNAME=your_user
+DB_PASSWORD=your_password
+DESTINATION_DIR=uploads
+Frontend (Client)
+The frontend will fetch from the backend API, make sure the backend server is running before starting the frontend.
+Usage
+Once both the backend and frontend servers are running:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Navigate to http://localhost:3000 in your browser (or the frontend’s running port if configured differently).
+Upload files and manage them via the user-friendly interface.
+View, download, and delete files stored on the server.
+Contributing
+Contributions are welcome! Feel free to fork the repository, make improvements, and create pull requests.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Steps for contributing:
+Fork the repository
+Create a new branch (git checkout -b feature/your-feature)
+Commit your changes (git commit -am 'Add new feature')
+Push to the branch (git push origin feature/your-feature)
+Create a new Pull Request
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
